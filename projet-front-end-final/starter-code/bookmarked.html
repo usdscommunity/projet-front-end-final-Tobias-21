@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="../src/style.css">
+  
+  <title>Frontend Mentor | Entertainment web app</title>
+</head>
+<body class="bg-slate-900">
+  
+  <section class="flex lg:flex-row flex-col">
+      <nav class="bg-slate-800 m-3 rounded-lg flex lg:flex-col flex-row justify-between h-3/4 p-5 ">
+        <img src="/assets/images/logo.svg" alt="logo" class="lg:mb-16 mt-3" width="30px">
+
+        <ul class="flex lg:flex-col lg:space-y-6 lg:space-x-0 space-x-5">
+          <li class=" mt-3"> <a href="../index.html"><img src="/assets/images/icon-nav-home.svg" alt="home"></a></li>
+          <li class=" mt-3"> <a href="movies.html"> <img src="/assets/images/icon-nav-movies.svg" alt="movie"></a></li>
+          <li class=" mt-3"> <a href="tv-series.html"> <img src="/assets/images/icon-nav-tv-series.svg" alt="tv"></a></li>
+          <li class=" mt-3"> <a href="bookmarked.html"> <img src="/assets/images/icon-nav-bookmark.svg" alt="bookmark"></a> </li>
+        </ul>
+
+        <a href="starter-code/login.html"> <img src="/assets/images/image-avatar.png" alt="avatar" class="lg:mt-64 lg:h-15 h-10 border-2 rounded-full"></a>
+      </nav>
+
+      <main class="m-3 flex flex-col lg:w-11/12 ">
+        <div class="rounded-lg flex py-5">
+
+          <button> <img src="/assets/images/icon-search.svg" alt="search"> </button>
+          <input type="search" id="search-bar"  placeholder="Search for bookmarked shows" class="outline-none text-slate-200 ms-4 bg-slate-900 w-6/12">
+        </div>
+
+         <!-- Display bookmarked movies -->
+        <h3 class="text-gray-300 text-xl my-7">Bookmarked Movies</h3>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="bookmark_movies">
+
+      </div>
+  
+        <!-- Display bookmarked TV series -->
+
+        <h3 class="text-gray-300 text-xl my-7">Bookmarked TV Series</h3>
+         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="bookmark_tv">
+    
+        </div>
+
+        </main>
+  </section>
+      <script> window.currentCategory = "bookmarks";</script>
+        <script type="module" src="../src/main.js"></script>
+</body>
+</html>
