@@ -12,24 +12,24 @@ fetch('data.json').then((response) => response.json()).then((items) => {
 
   function updateActiveIcon(category) {
     // D’abord remettre tous les icons en version "inactive"
-    document.querySelector('img[alt="home"]').src = "/assets/images/icon-nav-home.svg";
-    document.querySelector('img[alt="movie"]').src = "/assets/images/icon-nav-movies.svg";
-    document.querySelector('img[alt="tv"]').src = "/assets/images/icon-nav-tv-series.svg";
-    document.querySelector('img[alt="bookmark"]').src = "/assets/images/icon-nav-bookmark.svg";
+    document.querySelector('img[alt="home"]').src = "assets/images/icon-nav-home.svg";
+    document.querySelector('img[alt="movie"]').src = "assets/images/icon-nav-movies.svg";
+    document.querySelector('img[alt="tv"]').src = "assets/images/icon-nav-tv-series.svg";
+    document.querySelector('img[alt="bookmark"]').src = "assets/images/icon-nav-bookmark.svg";
 
     // changer l'icône active selon la catégorie
     switch(category) {
       case "All": // page principale
-        document.querySelector('img[alt="home"]').src = "/assets/images/icon-nav-home-red.svg";
+        document.querySelector('img[alt="home"]').src = "assets/images/icon-nav-home-red.svg";
         break;
       case "Movie":
-        document.querySelector('img[alt="movie"]').src = "/assets/images/icon-nav-movies-red.svg";
+        document.querySelector('img[alt="movie"]').src = "assets/images/icon-nav-movies-red.svg";
         break;
       case "TV Series":
-        document.querySelector('img[alt="tv"]').src = "/assets/images/icon-nav-tv-series-red.svg";
+        document.querySelector('img[alt="tv"]').src = "assets/images/icon-nav-tv-series-red.svg";
         break;
       case "bookmarks":
-        document.querySelector('img[alt="bookmark"]').src = "/assets/images/icon-nav-bookmark-red.svg";
+        document.querySelector('img[alt="bookmark"]').src = "assets/images/icon-nav-bookmark-red.svg";
         break;
     }
   }
@@ -76,8 +76,8 @@ fetch('data.json').then((response) => response.json()).then((items) => {
 
     const bookImg = document.createElement('img');
     bookImg.src = item.isBookmarked
-        ? "/assets/images/icon-bookmark-full.svg"
-        : "/assets/images/icon-bookmark-empty.svg";
+        ? "assets/images/icon-bookmark-full.svg"
+        : "assets/images/icon-bookmark-empty.svg";
 
     bookmark.appendChild(bookImg);
     card.appendChild(bookmark);
@@ -100,9 +100,9 @@ fetch('data.json').then((response) => response.json()).then((items) => {
     categoryImg.className = 'w-4 h-4 inline-block';
 
     if (item.category === "Movie") {
-      categoryImg.src = "/assets/images/icon-category-movie.svg";
+      categoryImg.src = "assets/images/icon-category-movie.svg";
     } else if (item.category === "TV Series") {
-      categoryImg.src = "/assets/images/icon-category-tv.svg";
+      categoryImg.src = "assets/images/icon-category-tv.svg";
     }
 
     const categorySpan = document.createElement('span');
